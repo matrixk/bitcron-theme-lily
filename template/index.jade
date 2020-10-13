@@ -1,0 +1,48 @@
+html
+	head
+		block title
+			if site.configs.sub_title
+				title= site.title + '・' + site.configs.sub_title
+			else
+				title= site.title
+		+h.headers
+		+h.load('/template/style.scss')
+		script(src='/template/include/jquery-3.5.0.js')
+		link(href='https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,600,700|Source+Code+Pro:200|Long+Cang&display=swap', rel='stylesheet')
+		link(href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', rel='stylesheet')
+
+	body
+		#pageSide
+			header
+				.siteTitleContainer
+					a.siteTitle(href="/")= site.title
+				.siteTextContainer
+					.siteText
+						span.special= site.configs.sub_title
+						span= "请在这里写上博主自己想写的简介内容"
+					+site.just_nav
+
+		#pageMain
+			block main
+				article
+					ul
+						for post in posts
+							li
+								time(datetime= post.date.format('%Y-%m-%d'))= post.date.format('%Y/%m/%d')
+								a.articleTitle(href=post.url)= post.title
+					#pager
+						+h.paginator(style='mini', max_count='9')
+
+			footer
+				p
+					span="© " + site.configs.admin_name +" "+ site.now.year
+					span="Powered by Bitcron"
+		script.
+			function myFunction() {
+				var x = document.getElementById("nav");
+				if (x.className === "topNav") {
+				x.className += " responsive";
+				} else {
+				x.className = "topNav";
+				}
+			}

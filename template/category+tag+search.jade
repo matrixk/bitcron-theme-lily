@@ -1,0 +1,35 @@
+extends index
+
+block title
+	if request.path.startswith('/category/') and posts.category
+		title= '分类：' + posts.category.title + '・' + site.title
+	elif request.path.startswith('/tag/') and posts.tags
+		title= '标签：' + posts.tags.join('+') + '・' + site.title
+	elif request.args.s
+		title= '搜索关键字：' + request.args.s + '・' + site.title
+	else
+		title= site.title
+
+block main
+	#postInner
+		.catLabel
+			if request.path.startswith('/category/') and posts.category
+				span= '「' + posts.category.title + '」' + '下的文章'
+			
+			elif request.path.startswith('/tag/') and posts.tags
+				span= '「' + posts.tags.join('+') + '」' + '下的文章'
+			
+			elif request.args.s
+				span= '「' + request.args.s + '」' + '搜索到的文章'
+
+		.catMainTitle
+			for post in posts
+				.postTitleInner
+					a(href=post.url)= post.title
+					if post.metadata.summary
+						.summary= post.metadata.summary
+					else
+						.summary= post.content.limit(words=120).no_pic.plain
+
+		#pager
+			+h.paginator(style='mini', max_count='9')
