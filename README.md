@@ -9,7 +9,3 @@
 ![Screenshot](./Screenshot-03.png)
 
 ![Screenshot](./Screenshot-04.png)
-
-![Screenshot](./Screenshot-05.png)
-
-![Screenshot](./Screenshot-06.png)
