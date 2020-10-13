@@ -7,5 +7,3 @@
 ![Screenshot](./Screenshot-02.png)
 
 ![Screenshot](./Screenshot-03.png)
-
-![Screenshot](./Screenshot-04.png)
