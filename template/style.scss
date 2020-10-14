@@ -14,7 +14,7 @@ $comment-border: #cecece 1px solid;
 $box-shadow: 0 0 10px #f1f1f1;
 $font-weight-light: 400;
 $font-weight-medium: 600;
-$font-weight-heavy: 700;
+$font-weight-heavy: 800;
 /* templates for extend */
 .module {
     font-size: 1em*0.9;
@@ -466,7 +466,7 @@ a {
             -o-transition: $transition;
             transition: $transition;
             &:hover {
-                background: $light-grey;
+                background: $light-color;
             }
         }
         .foldup {
