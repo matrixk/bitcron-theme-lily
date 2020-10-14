@@ -1,13 +1,13 @@
 $white: #ffffff;
 $black: #000000;
-$light-color: #def1ff;
+$light-color: #ffdde3;
 $light-grey: #f1f1f1;
 $grey: #888888;
 $line-height: 2;
 $transition: all 0.5s;
 $border: #888888 1px dotted;
-$half-bg: linear-gradient(to top, #def1ff, #def1ff 30%, transparent 30%) no-repeat;
-$text-decoration: #def1ff dotted underline;
+$half-bg: linear-gradient(to top, #ffdde3, #ffdde3 30%, transparent 30%) no-repeat;
+$text-decoration: #ffdde3 dotted underline;
 $font-family-cursive: 'Long Cang', cursive;
 $font-family: "Noto Serif CJK SC", "Noto Serif SC", "Source Han Serif SC", "Noto Serif CJK",  "Source Han Serif", source-han-serif-sc, sans-serif;
 $comment-border: #cecece 1px solid;
@@ -69,7 +69,7 @@ a {
                     display: block;
                     width: 110px;
                     height: 0.4em;
-                    background-color: #def1ff;
+                    background-color: #ffdde3;
                     position: relative;
                     left: 120px;
                     top: -26px;
@@ -207,7 +207,7 @@ a {
                         display: block;
                         width: 60px;
                         height: 17px;
-                        background-color: #def1ff;
+                        background-color: #ffdde3;
                         position: relative;
                         left: -16px;
                         top: -20px;
@@ -257,7 +257,7 @@ a {
         blockquote {
             color: #888888;
             padding: 0 2em;
-            border: #def1ff 1px dotted;
+            border: #ffdde3 1px dotted;
             margin: 0;
             font-style: italic;
         }
@@ -535,7 +535,7 @@ a {
                             display: block;
                             width: 60px;
                             height: 17px;
-                            background-color: #def1ff;
+                            background-color: #ffdde3;
                             position: relative;
                             left: -16px;
                             top: -20px;
